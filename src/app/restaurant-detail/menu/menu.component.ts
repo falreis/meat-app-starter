@@ -12,7 +12,7 @@ import {MenuItem} from '../menu-item/menu-item.model'
 })
 export class MenuComponent implements OnInit {
 
-  menu: Observable<MenuItem>
+  menu: Observable<MenuItem[]>
 
   constructor(private restaurantsService: RestaurantsService,
     private route: ActivatedRoute) { }
