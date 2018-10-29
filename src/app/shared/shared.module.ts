@@ -8,6 +8,7 @@ import { CommonModule } from "@angular/common";
 import { ShoppingCartService } from "../restaurant-detail/shopping-cart/shopping-cart.service";
 import { RestaurantsService } from "../restaurants/restaurants.service";
 import { OrderService } from "../order/order.service";
+import { LoginService } from "../security/login/login.service";
 
 @NgModule({
     declarations: [InputComponent, RadioComponent, RatingComponent],
@@ -30,6 +31,7 @@ export class SharedModule{
             providers: [ShoppingCartService
                 , RestaurantsService
                 , OrderService
+                , LoginService
             ]
         }
     }
