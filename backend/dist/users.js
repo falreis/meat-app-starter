@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-var User = /** @class */ (function () {
+var User = (function () {
     function User(email, name, password) {
         this.email = email;
         this.name = name;

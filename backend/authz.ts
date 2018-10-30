@@ -13,7 +13,7 @@ export const handleAuthorization = (req: Request, resp: Response, next) => {
             if(decoded){
                 next()
             } else{
-                resp.status(403).json({message: 'Não autorizado!'})
+                resp.status(401).json({message: 'Não autorizado!'})
             }
         })
     }
@@ -23,9 +23,12 @@ function extractToken(req: Request){
     let token = undefined
     if(req.headers && req.headers.authorization){
         //Authorization: Bearer ZZZ.ZZZ.ZZZ
+        //console.log(req.headers.authorization)
         const parts: string[] = req.headers.authorization.split(' ')
+        //console.log(parts.length)
         if(parts.length === 2 && parts[0] === 'Bearer'){
             token = parts[1]
+            //console.log(token)
         }
     }
     return token

@@ -14,7 +14,7 @@ exports.handleAuthentication = function (req, resp) {
         resp.json({ name: dbuser.name, email: dbuser.email, accessToken: token });
     }
     else {
-        resp.status(403).json({ message: 'Dados inválidos.' });
+        resp.status(401).json({ message: 'Dados inválidos.' });
     }
 };
 function isValid(user) {
